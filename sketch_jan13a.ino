@@ -1,3 +1,4 @@
+#include <avr/pgmspace.h>
 #include <MemoryFree.h>
 #include <TVout.h>
 #include <fontALL.h>
@@ -7,7 +8,7 @@
 
 
 static TVout tv;
-//TVout & _tv = tv;
+TVout & _tv = tv;
 
 DrawableButton b1;
 DrawableButton b2;
@@ -20,8 +21,8 @@ DrawableButton b8;
 
 ViewController vc;
 
-Drawable * const v1contents[] = {&b1, &b2, &b3, &b4, &b5, &b6, &b7, &b8};
-int v1_size = 7;
+Drawable * const  v1contents[] = {&b1, &b2, &b3, &b4, &b5, &b6, &b7, &b8};
+ int  v1_size = 7;
 
 
 void setup() {
@@ -35,14 +36,14 @@ void setup() {
   vc = ViewController(_tv);
   
   // Create some objects
-  b1 = DrawableButton(&tv, 0, 0,24, 8,"Test1");
-  b2 = DrawableButton(&tv, 0,12,24, 8,"Test2");
-  b3 = DrawableButton(&tv, 0,24,24, 8,"Test3");
-  b4 = DrawableButton(&tv, 0,36,24, 8,"Test4");
-  b5 = DrawableButton(&tv, tv.hres()-25,0,24, 8,"Test5");
-  b6 = DrawableButton(&tv, tv.hres()-25,12,24, 8,"Test6");
-  b7 = DrawableButton(&tv, tv.hres()-25,24,24, 8,"Test7");
-  b8 = DrawableButton(&tv, tv.hres()-25,36,24, 8,"Test8");
+  b1 = DrawableButton(_tv, 0, 0,24, 8,"Test1");
+  b2 = DrawableButton(_tv, 0,12,24, 8,"Test2");
+  b3 = DrawableButton(_tv, 0,24,24, 8,"Test3");
+  b4 = DrawableButton(_tv, 0,36,24, 8,"Test4");
+  b5 = DrawableButton(_tv, tv.hres()-25,0,24, 8,"Test5");
+  b6 = DrawableButton(_tv, tv.hres()-25,12,24, 8,"Test6");
+  b7 = DrawableButton(_tv, tv.hres()-25,24,24, 8,"Test7");
+  b8 = DrawableButton(_tv, tv.hres()-25,36,24, 8,"Test8");
 
  
   // Create a collection of some objects
