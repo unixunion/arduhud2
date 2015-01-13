@@ -3,7 +3,6 @@
 
 #include "Drawable.h"
 #include <TVout.h>
-#include "Arduino.h"
 
 class DrawableButton : public Drawable 
 {	

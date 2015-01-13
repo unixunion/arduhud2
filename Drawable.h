@@ -7,7 +7,6 @@ Drawable object base class
 #ifndef DRAWABLE_H
 #define DRAWABLE_H
 
-#include <fontALL.h>
 #import "Arduino.h"
 
 class Drawable

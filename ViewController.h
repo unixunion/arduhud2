@@ -7,7 +7,7 @@
 
 //#include "Arduino.h"
 #include <TVout.h>
-#include <fontALL.h>
+//#include <fontALL.h>
 #include "Drawable.h"
 
 class ViewController
@@ -21,7 +21,6 @@ class ViewController
     void changeView(Drawable * const drawableObject[], int maxn);
     void draw();
     void update();
-    int currentView;
     int numObjects;
     Drawable * const * contents;
     int size(Drawable * const b[]);
