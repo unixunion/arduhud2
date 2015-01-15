@@ -21,7 +21,7 @@ class ViewController
     void changeView(Drawable * const drawableObject[], int maxn);
     void draw();
     void update();
-    int numObjects;
+    byte numObjects;
     Drawable * const * contents;
     int size(Drawable * const b[]);
     TVout * _tv;

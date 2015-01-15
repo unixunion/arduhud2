@@ -17,10 +17,10 @@ void ViewController::changeView(Drawable * const drawableObject[], int maxn) {
 //  Serial.print(F("MaxN: "));
 //  Serial.println(maxn);
 //  delay(500);
-  numObjects = maxn;
+  numObjects = (byte)maxn;
   
   //for drawable in view[index] call .draw();
-  for (int x=0; x<=numObjects; x++) {
+  for (int x=0; x<=(int)numObjects; x++) {
 //    Serial.print(F("Calling draw on object: "));
 //    Serial.println(x);
 //    delay(500);
@@ -33,7 +33,7 @@ void ViewController::changeView(Drawable * const drawableObject[], int maxn) {
 void ViewController::update() {
 //  Serial.println(F("ViewController::update() enter"));
 //  int maxn = size(contents);
-  for (int x=0; x<=numObjects; x++) {
+  for (int x=0; x<=(int)numObjects; x++) {
 //    Serial.print(F("update x: "));
 //    Serial.println(x);
     contents[x]->update();
