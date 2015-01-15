@@ -26,7 +26,7 @@ const int v1_size = 7;
 void setup() {
   // put your setup code here, to run once:
 //  Serial.begin(9600);
-  tv.begin(NTSC,128,64);
+  tv.begin(NTSC,112,64);
   tv.select_font(font4x6);
   tv.clear_screen();
   
